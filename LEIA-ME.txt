@@ -1,0 +1,1 @@
+O presente trabalho visa orientar desenvolvedores iniciantes na prática de teste de software. Assim, serão elaborados vários casos de teste de classes avulsas e distintas, utilizando o framework JUnit e apresentando suas várias funcionalidades.
