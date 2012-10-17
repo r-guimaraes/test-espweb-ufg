@@ -120,13 +120,16 @@ public class UtilsTest {
      * argument to the {@code @Test} annotation.
      * 
      */
-    @Test(timeout = 2500)
+    
+    @Ignore // ignora este teste
+    @Test(timeout = 5000)
     public void testWithTimeout() {
         System.out.println("* UtilsTest: test method 2 - testWithTimeout()");
         final int factorialOf = 1 + (int) (30000 * Math.random());
         System.out.println("computing " + factorialOf + '!');
         System.out.println(factorialOf + "! = " + Utils.computeFactorial(factorialOf));
     }
+    
 
     /**
      * Test of expected exception. If a given exception is not thrown during the
