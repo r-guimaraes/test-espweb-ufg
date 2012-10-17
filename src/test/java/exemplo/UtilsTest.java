@@ -120,7 +120,7 @@ public class UtilsTest {
      * argument to the {@code @Test} annotation.
      * 
      */
-    @Test(timeout = 1000)
+    @Test(timeout = 2500)
     public void testWithTimeout() {
         System.out.println("* UtilsTest: test method 2 - testWithTimeout()");
         final int factorialOf = 1 + (int) (30000 * Math.random());
