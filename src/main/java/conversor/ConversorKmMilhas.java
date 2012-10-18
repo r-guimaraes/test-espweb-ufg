@@ -37,8 +37,4 @@ public class ConversorKmMilhas {
     System.out.println(milhas + " milhas equivale a " + valor + " km.");
     return valor;
   }  
-  public static void main(String[] args) {
-    new ConversorKmMilhas().converteKmParaMilhas(20.0);
-    new ConversorKmMilhas().converteMilhasParaKm(50.0);
-  }
 } // class
