@@ -35,7 +35,7 @@ public class CalculadoraTest {
     Calculadora d = new Calculadora();
     d.anulaFraseInicial();
     String nulo = d.getFraseInicial();
-    System.out.println("@var frase_inicial deve retornar nula >> " + nulo);
+    System.out.println("@var fraseInicial deve retornar nula >> " + nulo);
     assertNull(nulo);
   }
 
@@ -47,21 +47,51 @@ public class CalculadoraTest {
 
   @Test
   public void testMultiplicar() {
+    Integer result = c.multiplicar(20, 20);
+    assertThat(result, is(not(401)));
+    assertThat(result, is(400));
   }
 
   @Test
   public void testSubtratir() {
+    Integer result = c.subtratir(4,3);
+    Integer result2 = c.subtratir(result, 50);
+    
+    assertTrue("Testando metodo subtração \n", result.equals(1));
+    assertTrue("Testando metodo subtração com resultado anterior \n", result2 == -49);    
   }
 
+   /*
+    * Testa diferença do caracter de retorno na igualdade de strings
+    * Checa se nome é exibido conforme passado 
+    */  
   @Test
   public void testComprimentaUsuarioCalculadora() {
+   String str1 = c.comprimentaUsuarioCalculadora("Auri");
+   String str2 = "Obrigado por usar a calculadora de Testes UFG, Auri";
+   String str3 = "Obrigado por usar a calculadora de Testes UFG, Auri\n";
+   assertTrue(str1.equals(str2));
+   
+   assertTrue(str1.startsWith("O"));
+   
+   assertTrue(str1.contains("Auri"));   
+   assertFalse(str1.contains("auri"));
+   
+   assertFalse(str1.equals(str3));
   }
 
+  
+  /*
+   * Análise de Valor Limite
+   */
   @Test
   public void testFatorial() {
     assertThat("Fatorial de 0 deve retornar 1", c.fatorial(0), is(1));
     assertThat("Fatorial de 4 deve retornar 24",c.fatorial(4), is(24));
     assertThat("Fatorial de 5 deve retornar 120",c.fatorial(5), is(120));
+    
+    assertThat("Fatorial de inteiro negativo não deve existir.",c.fatorial(-5), is(not(-120)));
+    assertThat("Fatorial de inteiro negativo deve retornar zero",c.fatorial(-5), is(0));    
   }
   
 }

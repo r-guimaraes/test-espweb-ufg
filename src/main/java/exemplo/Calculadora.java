@@ -126,7 +126,7 @@ public class Calculadora {
    * @return
    */
   public String comprimentaUsuarioCalculadora(String nome) {
-    return "Obrigado por usar a calculadora de Testes UFG, " + nome + "\n";
+    return "Obrigado por usar a calculadora de Testes UFG, " + nome;
   }
 
   /**
