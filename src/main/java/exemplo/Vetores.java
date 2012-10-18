@@ -1,8 +1,6 @@
 package exemplo;
 
 /**
- * 
- *
  * @author  rodrigo
  */
 public final class Vetores {

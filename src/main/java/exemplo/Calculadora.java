@@ -129,10 +129,24 @@ public class Calculadora {
     return "Obrigado por usar a calculadora de Testes UFG, " + nome;
   }
 
+    /**
+     * 
+     * @param frst
+     * @param scd
+     * @return 
+     */
+  public Boolean eLogico(Boolean frst, Boolean scd) {
+    if (frst) {
+      return scd;
+    } else {
+      return false;
+    }
+  } // eLogico
+
   /**
    *
    * @param x
-   * @return
+   * @return Integer
    */
   public Integer fatorial(Integer x) {
     if (x < 0) {
