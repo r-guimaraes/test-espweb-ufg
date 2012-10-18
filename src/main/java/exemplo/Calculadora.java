@@ -7,10 +7,10 @@ package exemplo;
 public class Calculadora {
 
   Integer num1, num2;
-  String frase_inicial = "Frase inicial da Classe Calculadora";
+  String fraseInicial = "Frase inicial da Classe Calculadora";
 
   /**
-   * 
+   *
    * @return
    */
   public Integer getnum2() {
@@ -18,30 +18,30 @@ public class Calculadora {
   }
 
   /**
-   * 
+   *
    * @return
    */
-  public String getFrase_inicial() {
-    return frase_inicial;
+  public String getFraseInicial() {
+    return fraseInicial;
   }
 
   /**
-   * 
+   *
    * @param frase_inicial
    */
-  public void setFrase_inicial(String frase_inicial) {
-    this.frase_inicial = frase_inicial;
+  public void setFraseInicial(String fraseInicial) {
+    this.fraseInicial = fraseInicial;
   }
 
   /**
-   * 
+   *
    */
   public void anulaFraseInicial() {
-    this.frase_inicial = null;
+    this.fraseInicial = null;
   }
 
   /**
-   * 
+   *
    * @param num2
    */
   public void setnum2(Integer num2) {
@@ -49,7 +49,7 @@ public class Calculadora {
   }
 
   /**
-   * 
+   *
    * @return
    */
   public Integer getnum1() {
@@ -57,7 +57,7 @@ public class Calculadora {
   }
 
   /**
-   * 
+   *
    * @param num1
    */
   public void setnum1(Integer num1) {
@@ -65,7 +65,7 @@ public class Calculadora {
   }
 
   /**
-   * 
+   *
    * @param num1
    * @param num2
    */
@@ -75,13 +75,13 @@ public class Calculadora {
   }
 
   /**
-   * 
+   *
    */
   public Calculadora() {
   }
 
   /**
-   * 
+   *
    * @param num1
    * @param num2
    * @return
@@ -91,7 +91,7 @@ public class Calculadora {
   }
 
   /**
-   * 
+   *
    * @param num1
    * @param num2
    * @return
@@ -101,7 +101,7 @@ public class Calculadora {
   }
 
   /**
-   * 
+   *
    * @param num1
    * @param num2
    * @return
@@ -111,7 +111,7 @@ public class Calculadora {
   }
 
   /**
-   * 
+   *
    * @param num1
    * @param num2
    * @return
@@ -121,7 +121,7 @@ public class Calculadora {
   }
 
   /**
-   * 
+   *
    * @param nome
    * @return
    */
@@ -130,13 +130,17 @@ public class Calculadora {
   }
 
   /**
-   * 
+   *
    * @param x
    * @return
    */
   public Integer fatorial(Integer x) {
-    if (x < 0) return 0;
-    else if (x == 0) return 1;
-    else return multiplicar(x,fatorial(x - 1));    
+    if (x < 0) {
+      return 0;
+    } else if (x == 0) {
+      return 1;
+    } else {
+      return multiplicar(x, fatorial(x - 1));
+    }
   }
 } // class

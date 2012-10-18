@@ -34,7 +34,7 @@ public class CalculadoraTest {
   public void testAnulaFraseInicial() {
     Calculadora d = new Calculadora();
     d.anulaFraseInicial();
-    String nulo = d.getFrase_inicial();
+    String nulo = d.getFraseInicial();
     System.out.println("@var frase_inicial deve retornar nula >> " + nulo);
     assertNull(nulo);
   }
