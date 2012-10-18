@@ -12,14 +12,25 @@ public class Utils {
     private Utils() { }
 
 
+    /**
+     * 
+     * @param words
+     * @return
+     */
     public static String concatWords(String... words) {
         StringBuilder buf = new StringBuilder();
         for (String word : words) {
             buf.append(word);
         }
         return buf.toString();
-    }
+    }    
 
+    /**
+     * 
+     * @param number
+     * @return
+     * @throws IllegalArgumentException
+     */
     public static String computeFactorial(int number) 
                                                throws IllegalArgumentException {
         if (number < 1) {
@@ -33,6 +44,11 @@ public class Utils {
         return factorial.toString();
     }
 
+    /**
+     * 
+     * @param word
+     * @return
+     */
     public static String normalizeWord(String word) {
         try {
             int i;

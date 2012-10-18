@@ -154,4 +154,5 @@ public class UtilsTest {
         System.out.println("* UtilsTest: test method 4 - checkExpectedException()");
         assertEquals("Malm\u00f6", Utils.normalizeWord("Malmo\u0308"));
     }
+   
 }

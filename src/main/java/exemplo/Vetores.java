@@ -11,6 +11,9 @@ public final class Vetores {
 
     /**
      * Checks whether the given vectors are equal.
+     * @param a
+     * @param b 
+     * @return  
      */
     public static boolean equal(int[] a, int[] b) {
         if ((a == null) || (b == null)) {
@@ -32,6 +35,9 @@ public final class Vetores {
 
     /**
      * Scalar multiplication of given vectors.
+     * @param a
+     * @param b 
+     * @return  
      */
     public static int scalarMultiplication(int[] a, int[] b) {
         if ((a == null) || (b == null)) {

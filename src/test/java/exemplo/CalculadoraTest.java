@@ -35,7 +35,7 @@ public class CalculadoraTest {
     Calculadora d = new Calculadora();
     d.anulaFraseInicial();
     String nulo = d.getFrase_inicial();
-    System.out.println("Testando metodo para anular @var frase_inicial >> " + nulo);
+    System.out.println("@var frase_inicial deve retornar nula >> " + nulo);
     assertNull(nulo);
   }
 
@@ -56,4 +56,12 @@ public class CalculadoraTest {
   @Test
   public void testComprimentaUsuarioCalculadora() {
   }
+
+  @Test
+  public void testFatorial() {
+    assertThat("Fatorial de 0 deve retornar 1", c.fatorial(0), is(1));
+    assertThat("Fatorial de 4 deve retornar 24",c.fatorial(4), is(24));
+    assertThat("Fatorial de 5 deve retornar 120",c.fatorial(5), is(120));
+  }
+  
 }
