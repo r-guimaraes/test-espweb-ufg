@@ -1,5 +1,6 @@
 package exemplo;
 
+import java.util.Arrays;
 import java.util.ArrayList;
 import java.util.Iterator;
 
@@ -53,7 +54,6 @@ public class Livro {
   public void setTitulo(String titulo) {
     this.titulo = titulo;
   }
-  
   ArrayList<Livro> BestSellers = null;
 
   public ArrayList<Livro> getBestSellers() {
@@ -70,16 +70,17 @@ public class Livro {
     bestSellers.add(livro2);
     bestSellers.add(livro3);
 
-   return bestSellers;
+    return bestSellers;
   }
 
-  public void ExibeBestSellers(ArrayList<Livro> listaDeBestSellers) {
+  public int ExibeBestSellers(ArrayList<Livro> listaDeBestSellers) {
     for (Iterator<Livro> it = listaDeBestSellers.iterator(); it.hasNext();) {
       Livro bSeller = it.next();
       System.out.println(bSeller.getTitulo() + "\n" + bSeller.getAutor());
       System.out.println(bSeller.getEditora() + ", " + bSeller.getAno());
       System.out.println("--------------------------------");
     }
+    return listaDeBestSellers.size();
   }
 
   public static void main(String[] args) {
@@ -93,4 +94,5 @@ public class Livro {
     System.out.println(l3.getClass());
 
   }
+
 } // class
