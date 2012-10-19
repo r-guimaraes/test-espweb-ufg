@@ -70,10 +70,8 @@ public class CalculadoraTest {
    String str1 = c.comprimentaUsuarioCalculadora("Auri");
    String str2 = "Obrigado por usar a calculadora de Testes UFG, Auri";
    String str3 = "Obrigado por usar a calculadora de Testes UFG, Auri\n";
-   assertTrue(str1.equals(str2));
-   
-   assertTrue(str1.startsWith("O"));
-   
+   assertTrue(str1.equals(str2));   
+   assertTrue(str1.startsWith("O"));   
    assertTrue(str1.contains("Auri"));   
    assertFalse(str1.contains("auri"));
    
@@ -93,5 +91,31 @@ public class CalculadoraTest {
     assertThat("Fatorial de inteiro negativo não deve existir.",c.fatorial(-5), is(not(-120)));
     assertThat("Fatorial de inteiro negativo deve retornar zero",c.fatorial(-5), is(0));    
   }
+  
+  @Test
+  public void testELogico() {
+    assertTrue(c.eLogico(true, true));
+    assertFalse(c.eLogico(false, true));
+    assertFalse(c.eLogico(true, false));
+    assertFalse(c.eLogico(false, false));
+  }
+  @Test
+  public void testOuLogico() {
+    assertTrue(c.ouLogico(true, true));
+    assertTrue(c.ouLogico(false, true));
+    assertTrue(c.ouLogico(true, false));
+    assertFalse(c.ouLogico(false, false));
+  }
+  
+  @Test
+  public void testParOuImpar() {
+    assertThat(c.ParOuImpar(2),is("par"));
+    assertThat(c.ParOuImpar(-44),is("par"));
+    assertThat(c.ParOuImpar(110),is("par"));
+    assertThat(c.ParOuImpar(3),is("ímpar"));
+    assertThat(c.ParOuImpar(45),is("ímpar"));
+    assertThat(c.ParOuImpar(-89),is("ímpar"));
+  }
+    
   
 }

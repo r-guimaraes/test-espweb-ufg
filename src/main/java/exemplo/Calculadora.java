@@ -129,12 +129,12 @@ public class Calculadora {
     return "Obrigado por usar a calculadora de Testes UFG, " + nome;
   }
 
-    /**
-     * 
-     * @param frst
-     * @param scd
-     * @return 
-     */
+  /**
+   *
+   * @param frst
+   * @param scd
+   * @return
+   */
   public Boolean eLogico(Boolean frst, Boolean scd) {
     if (frst) {
       return scd;
@@ -142,6 +142,24 @@ public class Calculadora {
       return false;
     }
   } // eLogico
+
+  public Boolean ouLogico(Boolean frst, Boolean scd) {
+    if (frst) {
+      return true;
+    } else if (scd) {
+      return true;
+    } else {
+      return false;
+    }
+  } // ouLogico
+
+  public String ParOuImpar(int num) {
+    if (num % 2 == 0) {
+      return "par";
+    } else {
+      return "ímpar";
+    }
+  }
 
   /**
    *
