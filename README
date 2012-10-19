@@ -1,1 +1,17 @@
-O presente trabalho visa orientar desenvolvedores iniciantes na prática de teste de software. Assim, serão elaborados vários casos de teste de classes avulsas e distintas, utilizando o framework JUnit e apresentando suas várias funcionalidades. Após estudar os casos de teste, o usuário deve ter a base para desenvolver seus próprios casos de teste.
+O presente trabalho visa orientar desenvolvedores iniciantes na prática de teste de software. Assim, serão elaborados vários casos de teste de classes avulsas e distintas, utilizando e apresentando o framework JUnit. Após estudar os casos de teste, o usuário deve ter a base para desenvolver seus próprios casos de teste.
+
+
+Foram desenvolvidos testes para:
+
+** Funções rotineiras de cálculo;
+** Manipulação de Vetores;
+** Utilidades gerais para manipulação de Strings;
+** Conversores variados (moeda e medidas);
+
+
+
+Aluno: Rodrigo de Oliveira Guimarães
+Usuário Assembla: bhorist
+Especialização em Desenvolvimento de Sistemas Web com Interfaces Ricas 2011/2012
+Disciplina: Programação Efetiva em Java / Testes - Professor Auri Vincenzzi
+
