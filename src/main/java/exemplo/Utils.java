@@ -9,7 +9,7 @@ import java.math.BigInteger;
  */
 public class Utils {
 
-  private Utils() {
+  public Utils() {
   }
 
   /**
@@ -24,6 +24,13 @@ public class Utils {
     }
     return buf.toString();
   }
+  
+  public static String pegaExtensao(String nomeArquivo) {  
+    System.out.println(nomeArquivo.lastIndexOf("."));
+    int posicao = nomeArquivo.lastIndexOf(".");
+    System.out.println(nomeArquivo.substring(posicao));
+    return nomeArquivo.substring(posicao);
+  }  
 
   /**
    *
@@ -43,6 +50,7 @@ public class Utils {
     }
     return factorial.toString();
   }
+  
 
   /**
    *

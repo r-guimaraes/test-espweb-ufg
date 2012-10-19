@@ -86,7 +86,7 @@ public class Livro {
   public void limparBestSellers(ArrayList<Livro> BestSellers) {
     BestSellers.clear();    
   }
-
+  
   public static void main(String[] args) {
 
     Livro bestSeller1 = new Livro("Steve Jobs", "Walter Isaacson", "Companhia das Letras", 2012);

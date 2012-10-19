@@ -18,58 +18,8 @@ public class UtilsTest {
 
     public UtilsTest() {
     }
-
     
-    /**
-     * Initialization method that is called only once. It is run before
-     * any test method is executed. It is run even sooner than any
-     * {@code @Before} method. If a test class is a test suite, its
-     * {@code @BeforeClass} method is called even sooner than any of test
-     * classes contained in the suite. <em>But:</em> If any of superclasses
-     * of a test class has some {@code @BeforeClass} method, the superclass
-     * {@code @BeforeClass} is called before. There may be only one method
-     * annotated with the {@code @BeforeClass} annotation.
-     * The name of the method is irrelevant - the only mandatory attributes are:
-     *   the {@code @BeforeClass} annotation,
-     *   the {@code public} and {@code static} modifiers
-     *   {@void} return type and
-     *   no arguments.
-     */
-    @BeforeClass
-    public static void setUpClass() throws Exception {
-        /*
-         * E.g. establish connection to a database so that it does not need to
-         * be established for each test separately.
-         */
-        System.out.println("* UtilsTest: @BeforeClass method");
-    }
-
-    
-    /**
-     * Tear down method that is called only once. It is run after all test
-     * methods and their {@code @After} methods are executed.
-     * If a test class is a test suite, its {@code @AfterClass} method is called
-     * even only after all test classes contained in the suite finish running.
-     * <em>But:</em> If any of the superclasses of a test class has some
-     * {@code @BeforeClass} method, the superclass {@code @BeforeClass} is
-     * called later. There may be only one method annotated with the
-     * {@code @AfterClass} annotation.
-     * The name of the method is irrelevant - the only mandatory attributes are:
-     *   the {@code @AfterClass} annotation,
-     *   the {@code public} and {@code static} modifiers
-     *   {@void} return type and
-     *   no arguments.
-     */
-    @AfterClass
-    public static void tearDownClass() throws Exception {
-        /*
-         * E.g. disconnect from the database - i.e. the complement to the action
-         * performed in setUpClass().
-         */
-        System.out.println("* UtilsTest: @AfterClass method");
-    }
-
-    
+   Utils u = null;
     /**
      * Test initialization method. It is executed before each test method
      * of this test class. There may be multiple test initialization methods
@@ -83,7 +33,8 @@ public class UtilsTest {
      */
     @Before
     public void setUp() {
-        System.out.println("* UtilsTest: @Before method");
+        System.out.println("* UtilsTest: @Before method .. instanciando @var u ..");
+        u = new Utils();
     }
 
     
@@ -100,7 +51,8 @@ public class UtilsTest {
      */
     @After
     public void tearDown() {
-        System.out.println("* UtilsTest: @After method");
+        System.out.println("* UtilsTest: @After method ... removendo @var u ..");
+        u = null;
     }
 
     /**
@@ -121,7 +73,7 @@ public class UtilsTest {
      * 
      */
         
-    @Test(timeout = 5000)
+    @Test(timeout = 2000)
     public void testWithTimeout() {
         System.out.println("* UtilsTest: test method 2 - testWithTimeout()");
         final int factorialOf = 81;
@@ -141,6 +93,11 @@ public class UtilsTest {
         System.out.println("* UtilsTest: test method 3 - checkExpectedException()");
         final int factorialOf = -5;
         System.out.println(factorialOf + "! = " + Utils.computeFactorial(factorialOf));
+    }
+    
+    @Test
+    public void testPegaExtensao() {      
+      assertTrue(u.pegaExtensao("foto01.jpg").equals(".jpg"));
     }
 
    
