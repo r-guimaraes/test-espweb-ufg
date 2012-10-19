@@ -1,5 +1,8 @@
 package exemplo;
 
+import java.util.ArrayList;
+import java.util.Iterator;
+
 /**
  *
  * @author rodrigo

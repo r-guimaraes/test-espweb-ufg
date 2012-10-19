@@ -73,14 +73,18 @@ public class Livro {
     return bestSellers;
   }
 
-  public int ExibeBestSellers(ArrayList<Livro> listaDeBestSellers) {
-    for (Iterator<Livro> it = listaDeBestSellers.iterator(); it.hasNext();) {
+  public int ExibeBestSellers(ArrayList<Livro> BestSellers) {
+    for (Iterator<Livro> it = BestSellers.iterator(); it.hasNext();) {
       Livro bSeller = it.next();
       System.out.println(bSeller.getTitulo() + "\n" + bSeller.getAutor());
       System.out.println(bSeller.getEditora() + ", " + bSeller.getAno());
       System.out.println("--------------------------------");
     }
-    return listaDeBestSellers.size();
+    return BestSellers.size();
+  }
+  
+  public void limparBestSellers(ArrayList<Livro> BestSellers) {
+    BestSellers.clear();    
   }
 
   public static void main(String[] args) {

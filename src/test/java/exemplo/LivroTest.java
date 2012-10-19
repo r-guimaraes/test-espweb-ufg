@@ -46,4 +46,11 @@ public class LivroTest {
     ArrayList<Livro> listaBS = l.MontaBestSellers(bestSeller1, bestSeller2, bestSeller3);   
     assertTrue("Método retorna itens passados", l.ExibeBestSellers(listaBS) == 3);
   }
+  
+  @Test
+  public void testLimpaBestSellers() {
+    ArrayList<Livro> listaBS = l.MontaBestSellers(bestSeller1, bestSeller2, bestSeller3); 
+    l.limparBestSellers(listaBS);
+    assertEquals(0, listaBS.size());
+  }
 }
